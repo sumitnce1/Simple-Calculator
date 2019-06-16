@@ -1,10 +1,11 @@
 # Simple-Calculator
 Simple Calculator using HTML, CSS &amp; Javascript.
+
 |Sumit| Webisite|
 |-----| -------- |
 |**My Personal Website**| [**Visit**](https://sumitnce1.github.io)
-|**My Portfolio 1**|[**Visit**](http://sumitnce.ml)
-|** My Simple Calci**|[**Visit**](https://sumitnce1.github.io/Simple-Calculator/)
+|**My Portfolio 1**| [**Visit**](http://sumitnce.ml)
+|** My Simple Calci**| [**Visit**](https://sumitnce1.github.io/Simple-Calculator/)
 
 <img src="cal.png" width="100%">
 
