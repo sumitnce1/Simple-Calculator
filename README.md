@@ -1,7 +1,7 @@
 # Simple-Calculator
 Simple Calculator using HTML, CSS &amp; Javascript.
 
-|Sumit| Webisite|
+|@| Webisite|
 |-----| -------- |
 |**My Personal Website**| [**Visit**](https://sumitnce1.github.io)
 |**My Portfolio 1**| [**Visit**](http://sumitnce.ml)
