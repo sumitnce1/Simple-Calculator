@@ -6,11 +6,11 @@ body{
 	width: 1509px;
 	height: 540px;
 	background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.3)), url(bgImg.jpg);
-	margin: 20px auto;	
+	margin: 5px 5px;	
 }
 #calculator{
 	width: 350px;
-	height: 520px;
+	height: 515px;
 	background-color: #eaedef;
 	margin: 0 auto;
 	top: 20px;
