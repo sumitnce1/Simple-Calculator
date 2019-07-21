@@ -82,3 +82,9 @@ button:nth-child(20){
 	font-size: 30px;
 	background-color: #9477af;
 }
+button:nth-child(17){
+	background-color: #ffffff;
+}
+button:nth-child(19){
+	background-color: #ffffff;
+}
