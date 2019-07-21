@@ -3,17 +3,17 @@ body{
 	background-color: black;
 }
 #container{
-	width: 1509px;
-	height: 540px;
+	width: 1500px;
+	height: 800px;
 	background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.3)), url(bgImg.jpg);
 	margin: 5px 5px;	
 }
 #calculator{
 	width: 350px;
-	height: 515px;
+	height: 600px;
 	background-color: #eaedef;
 	margin: 0 auto;
-	top: 15px;
+	top: 90px;
         down: 20px;
 	position: relative;
 	border-radius: 32px;
