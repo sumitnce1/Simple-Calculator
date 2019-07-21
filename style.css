@@ -20,21 +20,22 @@ body{
 	box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 5), 0 6px 20px 0 rgba(0, 0, 0, 1);
 }
 #result{
-	height: 120px;
+	height: 105px;
 }
 #history{
 	text-align: right;
 	height: 20px;
 	margin: 0 20px;
 	padding-top: 20px;
-	font-size: 15px;
-	color: #919191;
+	font-size: 19px;
+	color: #f8160b;
 }
 #output{
 	text-align: right;
 	height: 60px;
 	margin: 10px 20px;
 	font-size: 30px;
+	color: #f8160b;
 }
 #keyboard{
 	height: 400px;
