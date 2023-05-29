@@ -1,12 +1,37 @@
 body{
 	font-family: 'Open Sans',sans-serif;
 	background-color: black;
+	overflow-x: hidden
+	
 }
+
+#navbar{
+	text-align: center;
+}
+
+#title{
+	padding: 20px 10px;
+	color: white;
+}
+
+#developer-name{
+	color: white;
+}
+
+#networks{
+	padding: 30px 20px;
+}
+
+#footer{
+	padding: 10px 10px; 
+}
+
 #container{
 	width: 1500px;
 	height: 800px;
 	background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.3)), url(bgImg.jpg);
-	margin: 5px 5px;	
+	margin: 5px 5px;
+
 }
 #calculator{
 	width: 350px;
@@ -14,7 +39,7 @@ body{
 	background-color: #eaedef;
 	margin: 0 auto;
 	top: 90px;
-        down: 20px;
+    down: 20px;
 	position: relative;
 	border-radius: 32px;
 	box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 5), 0 6px 20px 0 rgba(0, 0, 0, 1);
@@ -33,8 +58,10 @@ body{
 #output{
 	text-align: right;
 	height: 60px;
+	max-height: 120px;
+	word-wrap: break-word;
 	margin: 10px 20px;
-	font-size: 30px;
+	font-size: 20px;
 	color: #f8160b;
 }
 #keyboard{
@@ -82,9 +109,9 @@ button:nth-child(20){
 	font-size: 30px;
 	background-color: #9477af;
 }
-button:nth-child(17){
-	background-color: #ffffff;
+button:nth-child(18){
+	background-color: #6a0ab8;
 }
 button:nth-child(19){
-	background-color: #ffffff;
+	background-color: #c21ab9;
 }

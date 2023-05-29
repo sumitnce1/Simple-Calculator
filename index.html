@@ -1,11 +1,24 @@
 <html>
 	<head>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700" rel="stylesheet">
 		<title>Simple Calculator</title>
 	</head>
 	<body>
-		<div id="container">
+		<div id="navbar" class="row">
+			<div class="col-4"></div>
+			<div id="title" class="col-4">
+				<h1 class="display-5">Simple Calculator</h1>
+			</div>
+			<div id="networks" class="col-4">
+				<a class="btn btn-outline-success" href="https://sumitnce1.github.io/" role="button">My WebSite</a>	
+				<a class="btn btn-outline-dark" href="https://github.com/sumitnce1" role="button">Github</a>
+				<a class="btn btn-outline-primary" href="https://twitter.com/Sumitnce1" role="button">Twitter</a>
+			</div>
+		</div>
+		<div id="container" class="text-center">
 			<div id="calculator">
 				<div id="result">
 					<div id="history">
@@ -32,21 +45,28 @@
 					<button class="number" id="2">2</button>
 					<button class="number" id="3">3</button>
 					<button class="operator" id="+">+</button>
-					<button class="empty" id="empty"></button>
 					<button class="number" id="0">0</button>
-					<button class="empty" id="empty"></button>
+					<button class="operator" id="!">!</button>
+					<button class="operator" id="**">^</button>
 					<button class="operator" id="=">=</button>
 				</div>
 			</div>
 		</div>
-		<script src="script.js"></script>
-	</body>
-    <!-- pagecounter-->
-              <p><font color="red">Page Views</font></p>
-	      <a href="http://www.sumitnce.ml/" target="_blank">
-               <img src="http://hitwebcounter.com/counter/counter.php?page=7107923&style=0019&nbdigits=5&type=page&initCount=0" title="good hits" Alt="good hits"   border="0" >                 
-    <!-- uniquecounter -->
-	      <p><font color="orange">Unique Vister</font></p>
-	      <a href="http://www.sumitnce.ml/" target="_blank">
-              <img src="http://hitwebcounter.com/counter/counter.php?page=7107924&style=0036&nbdigits=6&type=ip&initCount=0" title="good hits" Alt="good hits"   border="0" >
+			<div id="footer" class="row text-center">
+				<!-- pagecounter-->
+				<div class="col-4">
+					<p><font color="red">Page Views</font></p>
+					<a href="http://www.sumitnce.ml/" target="_blank"><img src="http://hitwebcounter.com/counter/counter.php?page=7107923&style=0019&nbdigits=5&type=page&initCount=0" class="img-fluid" title="good hits" Alt="good hits"   border="0" ></a>
+				<!-- uniquecounter -->
+				</div>
+				<div class="col-4">
+					<p id="developer-name">Developed by: Sumit Kumar</p>
+					</div>
+				<div class="col-4">
+					<p><font color="orange">Unique Vister</font></p>				
+					<a href="http://www.sumitnce.ml/" target="_blank"><img src="http://hitwebcounter.com/counter/counter.php?page=7107924&style=0036&nbdigits=6&type=ip&initCount=0" class="img-fluid" title="good hits" Alt="good hits"   border="0" ></a>
+				</div>
+			</div>
+		</body>
+	<script src="script.js"></script>
   </html>
