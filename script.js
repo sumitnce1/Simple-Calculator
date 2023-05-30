@@ -26,6 +26,13 @@ function getFormattedNumber(num){
 function reverseNumberFormat(num){
 	return Number(num.replace(/,/g,''));
 }
+
+function factorial(num) { //calculates the factorial of a number. Ex: 5! = 120
+	if(num < 0) return -1;
+	else if(num == 0 ) return 1;
+	else return num * factorial(num-1);
+} 
+
 var operator = document.getElementsByClassName("operator");
 for(var i =0;i<operator.length;i++){
 	operator[i].addEventListener('click',function(){
@@ -36,8 +43,15 @@ for(var i =0;i<operator.length;i++){
 		else if(this.id=="backspace"){
 			var output=reverseNumberFormat(getOutput()).toString();
 			if(output){//if output has a value
-				output= output.substr(0,output.length-1);
-				printOutput(output);
+				toutpu= output.substr(0,output.length-1);
+				printOutput(toutpu);
+			}
+		}
+		else if(this.id== "!") {
+			var output=reverseNumberFormat(getOutput()).toString()
+			if(output != "") {
+				var num = factorial(output);
+				printOutput(num);
 			}
 		}
 		else{
