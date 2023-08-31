@@ -137,3 +137,24 @@ button:nth-child(18) {
 button:nth-child(19) {
     background-color: #c21ab9;
 }
+
+.cracker {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    opacity: 0;
+    animation: cracker-burst 1s forwards;
+}
+
+@keyframes cracker-burst {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(5);
+    }
+}
