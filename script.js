@@ -1,92 +1,106 @@
-function getHistory(){
-	return document.getElementById("history-value").innerText;
+function getHistory() {
+    return document.getElementById("history-value").innerText;
 }
-function printHistory(num){
-	document.getElementById("history-value").innerText=num;
+
+
+function burstCracker(x, y) {
+    const cracker = document.createElement("div");
+    cracker.classList.add("cracker");
+    cracker.style.left = `${x}px`;
+    cracker.style.top = `${y}px`;
+    calculator.appendChild(cracker);
+
+    setTimeout(() => {
+        calculator.removeChild(cracker);
+    }, 5000);
 }
-function getOutput(){
-	return document.getElementById("output-value").innerText;
+
+function printHistory(num) {
+    document.getElementById("history-value").innerText = num;
 }
-function printOutput(num){
-	if(num==""){
-		document.getElementById("output-value").innerText=num;
-	}
-	else{
-		document.getElementById("output-value").innerText=getFormattedNumber(num);
-	}	
+
+function getOutput() {
+    return document.getElementById("output-value").innerText;
 }
-function getFormattedNumber(num){
-	if(num=="-"){
-		return "";
-	}
-	var n = Number(num);
-	var value = n.toLocaleString("en");
-	return value;
+
+function printOutput(num) {
+    if (num == "") {
+        document.getElementById("output-value").innerText = num;
+    } else {
+        document.getElementById("output-value").innerText = getFormattedNumber(num);
+    }
 }
-function reverseNumberFormat(num){
-	return Number(num.replace(/,/g,''));
+
+function getFormattedNumber(num) {
+    if (num == "-") {
+        return "";
+    }
+    var n = Number(num);
+    var value = n.toLocaleString("en");
+    return value;
+}
+
+function reverseNumberFormat(num) {
+    return Number(num.replace(/,/g, ''));
 }
 
 function factorial(num) { //calculates the factorial of a number. Ex: 5! = 120
-	if(num < 0) return -1;
-	else if(num == 0 ) return 1;
-	else return num * factorial(num-1);
-} 
+    if (num < 0) return -1;
+    else if (num == 0) return 1;
+    else return num * factorial(num - 1);
+}
 
 var operator = document.getElementsByClassName("operator");
-for(var i =0;i<operator.length;i++){
-	operator[i].addEventListener('click',function(){
-		if(this.id=="clear"){
-			printHistory("");
-			printOutput("");
-		}
-		else if(this.id=="backspace"){
-			var output=reverseNumberFormat(getOutput()).toString();
-			if(output){//if output has a value
-				toutpu= output.substr(0,output.length-1);
-				printOutput(toutpu);
-			}
-		}
-		else if(this.id== "!") {
-			var output=reverseNumberFormat(getOutput()).toString()
-			if(output != "") {
-				var num = factorial(output);
-				printOutput(num);
-			}
-		}
-		else{
-			var output=getOutput();
-			var history=getHistory();
-			if(output==""&&history!=""){
-				if(isNaN(history[history.length-1])){
-					history= history.substr(0,history.length-1);
-				}
-			}
-			if(output!="" || history!=""){
-				output= output==""?output:reverseNumberFormat(output);
-				history=history+output;
-				if(this.id=="="){
-					var result=eval(history);
-					printOutput(result);
-					printHistory("");
-				}
-				else{
-					history=history+this.id;
-					printHistory(history);
-					printOutput("");
-				}
-			}
-		}
-		
-	});
+for (var i = 0; i < operator.length; i++) {
+    operator[i].addEventListener('click', function() {
+        if (this.id == "clear") {
+            printHistory("");
+            printOutput("");
+        } else if (this.id == "backspace") {
+            var output = reverseNumberFormat(getOutput()).toString();
+            if (output) { //if output has a value
+                toutpu = output.substr(0, output.length - 1);
+                printOutput(toutpu);
+            }
+        } else if (this.id == "!") {
+            var output = reverseNumberFormat(getOutput()).toString()
+            if (output != "") {
+                var num = factorial(output);
+                printOutput(num);
+            }
+        } else {
+            var output = getOutput();
+            var history = getHistory();
+            if (output == "" && history != "") {
+                if (isNaN(history[history.length - 1])) {
+                    history = history.substr(0, history.length - 1);
+                }
+            }
+            if (output != "" || history != "") {
+                output = output == "" ? output : reverseNumberFormat(output);
+                history = history + output;
+                if (this.id == "=") {
+                    var result = eval(history);
+                    printOutput(result);
+                    printHistory("");
+                    burstCracker();
+                } else {
+                    history = history + this.id;
+                    printHistory(history);
+                    printOutput("");
+                }
+            }
+        }
+
+    });
 }
 var number = document.getElementsByClassName("number");
-for(var i =0;i<number.length;i++){
-	number[i].addEventListener('click',function(){
-		var output=reverseNumberFormat(getOutput());
-		if(output!=NaN){ //if output is a number
-			output=output+this.id;
-			printOutput(output);
-		}
-	});
+for (var i = 0; i < number.length; i++) {
+    number[i].addEventListener('click', function() {
+        var output = reverseNumberFormat(getOutput());
+        if (output != NaN) { //if output is a number
+            output = output + this.id;
+            printOutput(output);
+        }
+    });
 }
